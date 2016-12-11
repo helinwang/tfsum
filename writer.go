@@ -74,7 +74,6 @@ func (w *Writer) AddEvent(s string, step int64) error {
 
 	table := crc32.MakeTable(crc32.Castagnoli)
 	ck := mask(crc32.Checksum(l, table))
-	fmt.Println(ck)
 	c := make([]byte, 4)
 	binary.LittleEndian.PutUint32(c, ck)
 	ck = mask(crc32.Checksum(b, table))
