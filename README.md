@@ -2,6 +2,8 @@ Tensorflow provides golang api for model training and inference, however current
 
 This repository enables using tensorboard with tensorflow golang api.
 
+###Example
+
 ```
 import (
     "github.com/helinwang/tfsum"
@@ -9,7 +11,8 @@ import (
 )
 
 func main() {
-    var s *tf.Session
+	w := &tfsum.Writer{Dir:"./tf-log", Name:"train"}
+	var s *tf.Session
 	sum, err := s.Run(
 		map[tf.Output]*tf.Tensor{
 			s.g.Operation("input").Output(0): put,
@@ -23,7 +26,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = s.w.AddEvent(sum[0].Value().(string), int64(count))
+	err = w.AddEvent(sum[0].Value().(string), int64(count))
 	if err != nil {
 		fmt.Println(err)
 	}
