@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	step := 0
 	w := &tfsum.Writer{Dir:"./tf-log", Name:"train"}
 	var s *tf.Session
 	sum, err := s.Run(
@@ -26,7 +27,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = w.AddEvent(sum[0].Value().(string), int64(count))
+	err = w.AddEvent(sum[0].Value().(string), int64(step))
 	if err != nil {
 		fmt.Println(err)
 	}
