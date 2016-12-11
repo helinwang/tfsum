@@ -1,4 +1,6 @@
-Tensorflow provides golang api for model training and inference
+Tensorflow provides golang api for model training and inference, however currently tensorboard is only supported when using python.
+
+This repository enables using tensorboard with tensorflow golang api.
 
 ```
 import (
