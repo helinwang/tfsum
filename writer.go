@@ -2,7 +2,6 @@ package tfsum
 
 import (
 	"encoding/binary"
-	"fmt"
 	"hash/crc32"
 	"os"
 	"strconv"
