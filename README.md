@@ -33,3 +33,7 @@ func main() {
 	}
 }
 ```
+Then run tensorboard normally
+```
+tensorboard --logdir=./tf-log
+```
