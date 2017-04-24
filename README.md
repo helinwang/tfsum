@@ -4,7 +4,7 @@ This repository enables using tensorboard with tensorflow golang api. `tfsum.Wri
 
 Before using the following piece of code, you have to build tensorflow golang api: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/go/README.md
 
-###Example
+### Example
 
 ```
 package main
